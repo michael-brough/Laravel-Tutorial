@@ -16,9 +16,9 @@ use App\Http\Controllers\HomeController; // import for using Home Controller to 
 
 // Routes for Home-related pages. Controlled by the homecontroller class
 
-Route::get('/', [HomeController::class, 'index'] );
-Route::get('/about', [HomeController::class, 'about'] );
-Route::get('/contact', [HomeController::class, 'contact'] );
+Route::get('/', [HomeController::class, 'index'] )->name('home.index');
+Route::get('/about', [HomeController::class, 'about'] )->name('home.about');      // Name method adds names to each of these routes, the naming convention here is the name of the controller
+Route::get('/contact', [HomeController::class, 'contact'] )->name('home.contact');      // followed by a . then the name of the name of the action on that controller. they must have unique names
 
 
 // To make route parameters optional, follow them up with a ?, as seen below
