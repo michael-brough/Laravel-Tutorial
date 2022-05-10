@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { // For a get request for a URL that is just '/' 
     return view('welcome');
+});
+
+Route::get('/about', function () {
+    return '<h4>About Page</h4>';
 });
